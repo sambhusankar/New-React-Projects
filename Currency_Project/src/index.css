@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-image: url('https://images.pexels.com/photos/18979902/pexels-photo-18979902/free-photo-of-spanish-1-euro-coin-from-2001-with-the-image-of-king-miguel-de-cervantes-held-with-tweezers.jpeg?auto=compress&cs=tinysrgb&w=400');
+ 
+}

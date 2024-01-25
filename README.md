@@ -1,3 +1,2 @@
-#New React Projects
- i studying react.js with making hands on projects
- 
+# New-React-Projects
+i am learning react.js by making hands on projects.

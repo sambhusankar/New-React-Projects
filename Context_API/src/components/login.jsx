@@ -1,18 +1,18 @@
 import React,{useContext} from 'react'
-import { MyContext } from '../components/UserProvider';
+import userContext from "./UserProvider"
 // A component that uses the context value
 const MyComponent = () => {
-    const {theme,setColor} = useContext(MyContext);
+    const theme = useContext(userContext);
     const themeChanger =()=>{
-      if(theme=='green'){
-        setColor('red')
+      if(theme.color=='yellow'){
+        theme.setColor('red')
       }
-      if(theme=='red'){
-        setColor('green')
+      if(theme.color=='red'){
+        theme.setColor('yellow')
       }
     }
     return(
-    <div style={{background:theme}}>
+    <div style={{background:theme.color}}>
     <button onClick={themeChanger}>change theme</button>
     </div>
     ) ;

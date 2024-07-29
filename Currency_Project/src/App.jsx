@@ -5,13 +5,12 @@ import useCurrencyInfo from './currency_conv'
 
 
 function App() {
-   
-   const [from,setFrom] =useState('usd')
-   const [to,setTo] =useState('inr')
-   const [amount,setAmount]=useState(0)
-
-   const [convertedAmount,setConvertedAmount]=useState(0)
-   const obj= useCurrencyInfo(from)
+   console.log(useCurrencyInfo("inr"))
+   const [from,setFrom] = useState('usd')
+   const [to,setTo] = useState('inr')
+   const [amount,setAmount] = useState(0)
+   const [convertedAmount,setConvertedAmount] = useState(0)
+   const obj = useCurrencyInfo(from)
    const curr_list=Object.keys(obj)
    
    const onAmtChg =(e)=>{
@@ -25,13 +24,13 @@ function App() {
   const onCurrChg2 =(e)=>{
     setTo(e.target.value) 
   }
-  const onSWag= ()=>{
+  const onSWag = ()=>{
    setFrom(to)
    setTo(from)
    setAmount(convertedAmount)
    setConvertedAmount(amount)
   }
-  const convert = ()=>{
+  const convert = () => {
     setConvertedAmount(amount*obj[to])
   }
   return (
